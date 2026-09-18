@@ -69,7 +69,7 @@ install.packages(c("dplyr", "tidyr", "ggplot2", "ggrepel", "patchwork", "readxl"
 
 1. Place `maled_data.xlsx` (with the columns listed above) in the working
    directory.
-2. Run the script (e.g. `anemia_biomarker_analysis.R`) in R or RStudio.
+2. Run the script (`Rcode_anemia.R`) in R or RStudio.
 3. Outputs are printed to the console as tables (Table 1, GEE trend table,
    Table 2, Supplementary Tables 1a/1b/2/3/4) and plotted as figures
    (Figure 2: anemia prevalence by age; Figure 3: hemoglobin-biomarker
