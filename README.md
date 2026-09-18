@@ -44,10 +44,6 @@ renamed in script):
 | `Lead_15`, `Lead_24`, `Lead_144` | `Lead_15`, `Lead_24`, `Lead_12y` | Blood lead (µg/dL) |
 | `HAZ_7`, `HAZ_15`, `HAZ_24`, `HAZ_108`, `HAZ_144` | (unchanged) | Height-for-age z-scores |
 
-**Note:** The MAL-ED dataset itself is not included in this repository, as
-it is subject to a data use agreement. It is available upon request from
-the MAL-ED Network / study data repository. This repository shares only
-the analysis code.
 
 ## Requirements
 
