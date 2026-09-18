@@ -94,7 +94,3 @@ install.packages(c("dplyr", "tidyr", "ggplot2", "ggrepel", "patchwork", "readxl"
 
 MIT License — see `LICENSE`.
 
-## Citation
-
-If you use this code, please cite the associated manuscript (details to be
-added upon publication).
