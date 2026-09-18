@@ -1,7 +1,7 @@
 # MAL-ED Anemia and Nutritional Biomarker Analysis
 
 R code for the anemia and nutritional biomarker analysis using the MAL-ED
-longitudinal cohort dataset. The script
+(Malnutrition and Enteric Disease) longitudinal cohort dataset. The script
 classifies anemia using WHO 2024 age/sex-specific hemoglobin cut-offs,
 compares these to the previous WHO cut-offs, and analyzes associations
 between hemoglobin status and iron, vitamin B12, and lead biomarkers across
@@ -13,7 +13,7 @@ childhood.
   Moderate / Severe) using WHO 2024 age- and sex-specific cut-offs
 - Compares anemia prevalence under the previous (2011) vs. current WHO
   cut-offs at 7 and 15 months
-- Fits GEE models to estimate the linear and
+- Fits GEE models (exchangeable correlation) to estimate the linear and
   non-linear trend in anemia prevalence with age
 - Classifies iron sufficiency (body iron), vitamin B12 status, and lead
   exposure, and cross-tabulates these against anemia status
@@ -22,7 +22,9 @@ childhood.
 - Assesses data completeness and attrition (retained vs. dropped
   participants) across follow-up visits
 - Compares height-for-age z-scores (HAZ) by anemia status
-
+- Produces publication-ready tables (as R tibbles/data frames, intended for
+  export via flextable/officer) and figures (ggplot2/patchwork, exported as
+  TIFF in the original analysis pipeline)
 
 ## Input data
 
@@ -42,9 +44,15 @@ renamed in script):
 | `Lead_15`, `Lead_24`, `Lead_144` | `Lead_15`, `Lead_24`, `Lead_12y` | Blood lead (µg/dL) |
 | `HAZ_7`, `HAZ_15`, `HAZ_24`, `HAZ_108`, `HAZ_144` | (unchanged) | Height-for-age z-scores |
 
+**Note:** The MAL-ED dataset itself is not included in this repository, as
+it is subject to a data use agreement. It is available upon request from
+the MAL-ED Network / study data repository. This repository shares only
+the analysis code.
+
 ## Requirements
 
-R packages:
+R (version used for analysis: see `sessionInfo.txt` in this repo) with the
+following packages:
 
 - dplyr
 - tidyr
@@ -63,9 +71,9 @@ install.packages(c("dplyr", "tidyr", "ggplot2", "ggrepel", "patchwork", "readxl"
 
 ## Usage
 
-1. Place `maled_data.xlsx` in the working
+1. Place `maled_data.xlsx` (with the columns listed above) in the working
    directory.
-2. Run the script (`Rcode_anemia.R`) in R or RStudio.
+2. Run the script (e.g. `anemia_biomarker_analysis.R`) in R or RStudio.
 3. Outputs are printed to the console as tables (Table 1, GEE trend table,
    Table 2, Supplementary Tables 1a/1b/2/3/4) and plotted as figures
    (Figure 2: anemia prevalence by age; Figure 3: hemoglobin-biomarker
@@ -85,3 +93,12 @@ install.packages(c("dplyr", "tidyr", "ggplot2", "ggrepel", "patchwork", "readxl"
 | `supp_table3` | Combined iron/B12/lead/anemia status at 144 months |
 | `fig3` | Spearman correlation heatmap: hemoglobin vs. biomarkers by age |
 | `supp_table4` | Height-for-age z-score by anemia status |
+
+## License
+
+MIT License — see `LICENSE`.
+
+## Citation
+
+If you use this code, please cite the associated manuscript (details to be
+added upon publication).
