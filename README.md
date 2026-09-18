@@ -13,7 +13,7 @@ childhood.
   Moderate / Severe) using WHO 2024 age- and sex-specific cut-offs
 - Compares anemia prevalence under the previous (2011) vs. current WHO
   cut-offs at 7 and 15 months
-- Fits GEE models (exchangeable correlation) to estimate the linear and
+- Fits GEE models to estimate the linear and
   non-linear trend in anemia prevalence with age
 - Classifies iron sufficiency (body iron), vitamin B12 status, and lead
   exposure, and cross-tabulates these against anemia status
