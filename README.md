@@ -1,7 +1,7 @@
 # MAL-ED Anemia and Nutritional Biomarker Analysis
 
 R code for the anemia and nutritional biomarker analysis using the MAL-ED
-(Malnutrition and Enteric Disease) longitudinal cohort dataset. The script
+longitudinal cohort dataset. The script
 classifies anemia using WHO 2024 age/sex-specific hemoglobin cut-offs,
 compares these to the previous WHO cut-offs, and analyzes associations
 between hemoglobin status and iron, vitamin B12, and lead biomarkers across
@@ -44,11 +44,6 @@ renamed in script):
 | `Lead_15`, `Lead_24`, `Lead_144` | `Lead_15`, `Lead_24`, `Lead_12y` | Blood lead (µg/dL) |
 | `HAZ_7`, `HAZ_15`, `HAZ_24`, `HAZ_108`, `HAZ_144` | (unchanged) | Height-for-age z-scores |
 
-**Note:** The MAL-ED dataset itself is not included in this repository, as
-it is subject to a data use agreement. It is available upon request from
-the MAL-ED Network / study data repository. This repository shares only
-the analysis code.
-
 ## Requirements
 
 R (version used for analysis: see `sessionInfo.txt` in this repo) with the
@@ -73,7 +68,7 @@ install.packages(c("dplyr", "tidyr", "ggplot2", "ggrepel", "patchwork", "readxl"
 
 1. Place `maled_data.xlsx` (with the columns listed above) in the working
    directory.
-2. Run the script (e.g. `anemia_biomarker_analysis.R`) in R or RStudio.
+2. Run the script (e.g. `Rcode_anemia.R`) in R or RStudio.
 3. Outputs are printed to the console as tables (Table 1, GEE trend table,
    Table 2, Supplementary Tables 1a/1b/2/3/4) and plotted as figures
    (Figure 2: anemia prevalence by age; Figure 3: hemoglobin-biomarker
