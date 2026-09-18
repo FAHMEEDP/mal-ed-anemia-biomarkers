@@ -44,8 +44,7 @@ renamed in script):
 
 ## Requirements
 
-R (version used for analysis: see `sessionInfo.txt` in this repo) with the
-following packages:
+R packages:
 
 - dplyr
 - tidyr
