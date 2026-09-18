@@ -22,9 +22,7 @@ childhood.
 - Assesses data completeness and attrition (retained vs. dropped
   participants) across follow-up visits
 - Compares height-for-age z-scores (HAZ) by anemia status
-- Produces publication-ready tables (as R tibbles/data frames, intended for
-  export via flextable/officer) and figures (ggplot2/patchwork, exported as
-  TIFF in the original analysis pipeline)
+
 
 ## Input data
 
